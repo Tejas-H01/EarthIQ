@@ -12,7 +12,7 @@ Unlike traditional carbon calculators that generate generic advice, EarthIQ comb
 
 **Live Application:** https://earth-iq.vercel.app
 
-**Repository:** https://github.com/YOUR_USERNAME/EarthIQ
+**Repository:** https://github.com/Tejas-H01/EarthIQ
 
 ---
 
@@ -453,40 +453,52 @@ All tests pass successfully.
 ---
 
 # 📸 Screenshots
+## Login & Signup Page
+![Login](screenshots/signup.jpg)
 
 ## Landing Page
+![Landing Page](screenshots/LandingPage.jpg)
 
-_Add screenshot_
 
 ---
 
 ## Assessment Experience
 
-_Add screenshot_
+![Assessment Experience](screenshots/Assessment.jpg)
 
 ---
 
 ## Mission Control
 
-_Add screenshot_
+![Mission Control](screenshots/Mission.jpg)
+![Mission Control](screenshots/Mission1.jpg)
+![Mission Control](screenshots/Mission2.jpg)
+![Mission Control](screenshots/Mission3.jpg)
+
+
 
 ---
 
 ## AI Sustainability Coach
 
-_Add screenshot_
+![AI Sustainability Coach](screenshots/Coach.jpg)
+
 
 ---
 
 ## Journey Tracking
 
-_Add screenshot_
+![Journey Tracking](screenshots/Journey.jpg)
+![Journey Tracking](screenshots/Journey1.jpg)
 
 ---
 
 ## Sustainability Audit
 
-_Add screenshot_
+![Sustainability Audit](screenshots/Aduit.jpg)
+![Sustainability Audit](screenshots/Aduit1.jpg)
+![Sustainability Audit](screenshots/Aduit2.jpg)
+
 
 ---
 
@@ -614,14 +626,35 @@ EarthIQ was designed specifically to demonstrate:
 
 ---
 
-# 👨‍💻 Team
+# 👨‍💻 Developer
 
-Developed as part of the AI Sustainability Challenge.
+**Tejas Halvankar** || LinkedIn: [www.linkedin.com/in/tejashalvankar](https://github.com/Tejas-H01/EarthIQ)
+
+Information Technology Student  
+Thadomal Shahani Engineering College (TSEC)
+
+EarthIQ was designed and developed as part of the AI Sustainability Challenge with a focus on explainable climate intelligence, personalized decision-making, and real-world sustainability planning.
+
+
+
+
 
 ---
 
-## EarthIQ
+# 🌱 Vision
 
-**Understand your impact.  
-Discover your opportunity.  
-Change your future.**
+Climate change is one of the defining challenges of our generation.
+
+Many people want to live more sustainably but struggle to understand where to begin, which actions matter most, and how to maintain long-term progress.
+
+EarthIQ aims to bridge that gap by transforming sustainability data into clear, explainable decisions. Rather than overwhelming users with numbers and generic advice, EarthIQ provides personalized intelligence, transparent reasoning, and actionable plans that help individuals make meaningful environmental choices.
+
+The long-term vision is to make climate action understandable, accessible, and achievable for everyone.
+
+---
+
+## 🌍 EarthIQ
+
+**Understand Your Impact.  
+Discover Your Opportunity.  
+Change Your Future.**
