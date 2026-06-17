@@ -49,4 +49,18 @@ export class AssessmentRepository {
 
     return response.data;
   }
+
+  async loadAssessmentHistory(userId: string): Promise<AssessmentRow[]> {
+    const response = await this.client
+      .from("assessments")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false });
+
+    if (response.error) {
+      throw new Error(`loadAssessmentHistory failed: ${response.error.message}`);
+    }
+
+    return response.data || [];
+  }
 }

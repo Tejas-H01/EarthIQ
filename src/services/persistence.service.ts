@@ -43,6 +43,10 @@ export class PersistenceService {
     return this.repositories.assessments.loadLatestAssessment(userId);
   }
 
+  async loadAssessmentHistory(userId: string): Promise<AssessmentRow[]> {
+    return this.repositories.assessments.loadAssessmentHistory(userId);
+  }
+
   async saveRecommendations(input: {
     userId: string;
     assessmentId?: string | null;
@@ -71,6 +75,10 @@ export class PersistenceService {
     planId?: string;
   }): Promise<PlanRow | null> {
     return this.repositories.plans.loadPlan(input);
+  }
+
+  async loadPlanHistory(userId: string): Promise<PlanRow[]> {
+    return this.repositories.plans.loadPlanHistory(userId);
   }
 
   async updateProgress(input: ProgressUpdateInput): Promise<ProgressRow> {

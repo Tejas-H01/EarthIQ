@@ -13,6 +13,8 @@ export class PlannerEngine implements PlannerEngineContract {
   async generateFourWeekPlan(input: {
     recommendations: RankedRecommendation[];
   }): Promise<FourWeekSustainabilityPlan> {
+    const hotspotCategory = input.recommendations[0]?.category;
+
     const remaining = Array.from(
       new Map(
         input.recommendations.map((recommendation) => [
@@ -20,11 +22,18 @@ export class PlannerEngine implements PlannerEngineContract {
           recommendation,
         ]),
       ).values(),
-    ).sort(
-      (left, right) =>
+    ).sort((left, right) => {
+      if (hotspotCategory) {
+        const leftIsHotspot = left.category === hotspotCategory;
+        const rightIsHotspot = right.category === hotspotCategory;
+        if (leftIsHotspot && !rightIsHotspot) return -1;
+        if (!leftIsHotspot && rightIsHotspot) return 1;
+      }
+      return (
         left.difficulty - right.difficulty ||
-        right.impactScore - left.impactScore,
-    );
+        right.impactScore - left.impactScore
+      );
+    });
 
     const selected: RankedRecommendation[] = [];
 

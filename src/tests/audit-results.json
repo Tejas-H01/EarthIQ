@@ -1,0 +1,1745 @@
+{
+  "Urban Commuter (Transport Hotspot)": {
+    "carbonBreakdown": {
+      "categories": {
+        "transport": 7987.2,
+        "energy": 252,
+        "diet": 520,
+        "shopping": 336.00000000000006
+      },
+      "total": 9095.2
+    },
+    "hotspot": {
+      "category": "transport",
+      "percentageContribution": 87.82
+    },
+    "recommendations": [
+      {
+        "id": "transport-transit-commute",
+        "action": "Replace two weekly car commutes with public transit",
+        "category": "transport",
+        "impact": 420,
+        "cost": 80,
+        "difficulty": 3,
+        "supportedBudgetLevels": [
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions"
+        ],
+        "supportedEffortLevels": [
+          "medium",
+          "high"
+        ],
+        "explanation": "Transit substitution cuts recurring commute emissions.",
+        "priorityScore": 72,
+        "impactScore": 171.9,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "transport-bike-short-trips",
+        "action": "Use a bike or walking for short trips under 3 km",
+        "category": "transport",
+        "impact": 260,
+        "cost": 40,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Short trip mode shifts are low-cost and easy to start.",
+        "priorityScore": 68,
+        "impactScore": 138.875,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "energy-renewable-plan",
+        "action": "Switch to a renewable electricity plan",
+        "category": "energy",
+        "impact": 680,
+        "cost": 180,
+        "difficulty": 3,
+        "supportedBudgetLevels": [
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions"
+        ],
+        "supportedEffortLevels": [
+          "medium",
+          "high"
+        ],
+        "explanation": "Renewable supply can reduce a large share of energy emissions.",
+        "priorityScore": 88,
+        "impactScore": 272.6,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "energy-thermostat-optimization",
+        "action": "Adjust heating and cooling setpoints",
+        "category": "energy",
+        "impact": 320,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+        "priorityScore": 82,
+        "impactScore": 227.3333,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "diet-reduce-red-meat",
+        "action": "Replace red meat with lower-carbon proteins",
+        "category": "diet",
+        "impact": 410,
+        "cost": 10,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Protein swaps offer strong diet impact with modest effort.",
+        "priorityScore": 80,
+        "impactScore": 212.1875,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "diet-plant-forward-week",
+        "action": "Choose plant-forward meals five days per week",
+        "category": "diet",
+        "impact": 520,
+        "cost": 20,
+        "difficulty": 3,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions"
+        ],
+        "supportedEffortLevels": [
+          "medium",
+          "high"
+        ],
+        "explanation": "Plant-forward meals reduce high-impact food emissions.",
+        "priorityScore": 84,
+        "impactScore": 211.8,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-repair-before-replace",
+        "action": "Repair electronics or appliances before replacing",
+        "category": "shopping",
+        "impact": 300,
+        "cost": 120,
+        "difficulty": 3,
+        "supportedBudgetLevels": [
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money"
+        ],
+        "supportedEffortLevels": [
+          "medium",
+          "high"
+        ],
+        "explanation": "Repairing extends product life and avoids replacement emissions.",
+        "priorityScore": 74,
+        "impactScore": 127.3,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      }
+    ],
+    "plan": {
+      "weeks": [
+        {
+          "week": 1,
+          "actions": [
+            {
+              "id": "transport-bike-short-trips",
+              "action": "Use a bike or walking for short trips under 3 km",
+              "category": "transport",
+              "impact": 260,
+              "cost": 40,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Short trip mode shifts are low-cost and easy to start.",
+              "priorityScore": 68,
+              "impactScore": 138.875,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "actions": [
+            {
+              "id": "energy-thermostat-optimization",
+              "action": "Adjust heating and cooling setpoints",
+              "category": "energy",
+              "impact": 320,
+              "cost": 0,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+              "priorityScore": 82,
+              "impactScore": 227.3333,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "actions": [
+            {
+              "id": "transport-transit-commute",
+              "action": "Replace two weekly car commutes with public transit",
+              "category": "transport",
+              "impact": 420,
+              "cost": 80,
+              "difficulty": 3,
+              "supportedBudgetLevels": [
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions"
+              ],
+              "supportedEffortLevels": [
+                "medium",
+                "high"
+              ],
+              "explanation": "Transit substitution cuts recurring commute emissions.",
+              "priorityScore": 72,
+              "impactScore": 171.9,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "actions": [
+            {
+              "id": "energy-renewable-plan",
+              "action": "Switch to a renewable electricity plan",
+              "category": "energy",
+              "impact": 680,
+              "cost": 180,
+              "difficulty": 3,
+              "supportedBudgetLevels": [
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions"
+              ],
+              "supportedEffortLevels": [
+                "medium",
+                "high"
+              ],
+              "explanation": "Renewable supply can reduce a large share of energy emissions.",
+              "priorityScore": 88,
+              "impactScore": 272.6,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        }
+      ]
+    },
+    "missionControlData": {
+      "footprintTons": 9.0952,
+      "hotspotContribution": 87.82,
+      "bestAction": {
+        "action": "Replace two weekly car commutes with public transit",
+        "impact": 420
+      },
+      "projectedReduction": 420
+    },
+    "coachResponse": {
+      "type": "weekly_focus",
+      "category": "general",
+      "answer": "Focus on **Replace two weekly car commutes with public transit**. EarthIQ selected it because **transport** is the priority area, and it can reduce about **420 kg CO2e** annually. You have **0 progress updates** recorded, so keep the next step small and measurable.",
+      "model": "gemini-ready-demo",
+      "grounding": {
+        "hotspot": "transport",
+        "recommendationCount": 7,
+        "progressCount": 0
+      }
+    },
+    "decisionReport": {
+      "totalEmissions": 9095.2,
+      "largestEmissionSource": "transport",
+      "hotspotPercentage": 87.82,
+      "bestAction": {
+        "action": "Replace two weekly car commutes with public transit",
+        "impact": 420
+      },
+      "projectedReduction": 420,
+      "keyInsights": [
+        "Your annual footprint is 9095.2 kg CO2e.",
+        "transport is the largest emission source at 87.82%.",
+        "Your primary goal is reduce_emissions.",
+        "The highest-ranked action is Replace two weekly car commutes with public transit."
+      ],
+      "recommendationSummaries": [
+        {
+          "id": "transport-transit-commute",
+          "action": "Replace two weekly car commutes with public transit",
+          "category": "transport",
+          "impact": 420,
+          "priorityScore": 72,
+          "explanation": {
+            "title": "Replace two weekly car commutes with public transit",
+            "summary": "transport is your largest source of emissions.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "transport contributes 87.82% of your emissions.",
+              "This action could reduce approximately 420 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 420
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "transport-bike-short-trips",
+          "action": "Use a bike or walking for short trips under 3 km",
+          "category": "transport",
+          "impact": 260,
+          "priorityScore": 68,
+          "explanation": {
+            "title": "Use a bike or walking for short trips under 3 km",
+            "summary": "transport is your largest source of emissions.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "transport contributes 87.82% of your emissions.",
+              "This action could reduce approximately 260 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 260
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "energy-renewable-plan",
+          "action": "Switch to a renewable electricity plan",
+          "category": "energy",
+          "impact": 680,
+          "priorityScore": 88,
+          "explanation": {
+            "title": "Switch to a renewable electricity plan",
+            "summary": "Switch to a renewable electricity plan targets energy while your largest source is transport.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "energy contributes 2.77% of your emissions.",
+              "This action could reduce approximately 680 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 680
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "energy-thermostat-optimization",
+          "action": "Adjust heating and cooling setpoints",
+          "category": "energy",
+          "impact": 320,
+          "priorityScore": 82,
+          "explanation": {
+            "title": "Adjust heating and cooling setpoints",
+            "summary": "Adjust heating and cooling setpoints targets energy while your largest source is transport.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "energy contributes 2.77% of your emissions.",
+              "This action could reduce approximately 320 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 320
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "diet-reduce-red-meat",
+          "action": "Replace red meat with lower-carbon proteins",
+          "category": "diet",
+          "impact": 410,
+          "priorityScore": 80,
+          "explanation": {
+            "title": "Replace red meat with lower-carbon proteins",
+            "summary": "Replace red meat with lower-carbon proteins targets diet while your largest source is transport.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "diet contributes 5.72% of your emissions.",
+              "This action could reduce approximately 410 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 410
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "diet-plant-forward-week",
+          "action": "Choose plant-forward meals five days per week",
+          "category": "diet",
+          "impact": 520,
+          "priorityScore": 84,
+          "explanation": {
+            "title": "Choose plant-forward meals five days per week",
+            "summary": "Choose plant-forward meals five days per week targets diet while your largest source is transport.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "diet contributes 5.72% of your emissions.",
+              "This action could reduce approximately 520 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 520
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-repair-before-replace",
+          "action": "Repair electronics or appliances before replacing",
+          "category": "shopping",
+          "impact": 300,
+          "priorityScore": 74,
+          "explanation": {
+            "title": "Repair electronics or appliances before replacing",
+            "summary": "Repair electronics or appliances before replacing targets shopping while your largest source is transport.",
+            "reasoning": [
+              "transport contributes 87.82% of your emissions.",
+              "shopping contributes 3.69% of your emissions.",
+              "This action could reduce approximately 300 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 300
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Suburban Homeowner (Energy Hotspot)": {
+    "carbonBreakdown": {
+      "categories": {
+        "transport": 199.68,
+        "energy": 6048,
+        "diet": 780,
+        "shopping": 168.00000000000003
+      },
+      "total": 7195.68
+    },
+    "hotspot": {
+      "category": "energy",
+      "percentageContribution": 84.05
+    },
+    "recommendations": [
+      {
+        "id": "energy-thermostat-optimization",
+        "action": "Adjust heating and cooling setpoints",
+        "category": "energy",
+        "impact": 320,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+        "priorityScore": 82,
+        "impactScore": 126.8,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "energy-led-lighting",
+        "action": "Replace high-use bulbs with LEDs",
+        "category": "energy",
+        "impact": 140,
+        "cost": 60,
+        "difficulty": 1,
+        "supportedBudgetLevels": [
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "LED upgrades are simple and lower electricity demand.",
+        "priorityScore": 64,
+        "impactScore": 68.5,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-30-day-rule",
+        "action": "Use a 30-day rule for non-essential purchases",
+        "category": "shopping",
+        "impact": 210,
+        "cost": 0,
+        "difficulty": 1,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Delaying non-essential purchases reduces impulse consumption.",
+        "priorityScore": 76,
+        "impactScore": 146.0833,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "diet-reduce-red-meat",
+        "action": "Replace red meat with lower-carbon proteins",
+        "category": "diet",
+        "impact": 410,
+        "cost": 10,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Protein swaps offer strong diet impact with modest effort.",
+        "priorityScore": 80,
+        "impactScore": 115.8333,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-buy-secondhand",
+        "action": "Buy secondhand for clothing and home goods",
+        "category": "shopping",
+        "impact": 230,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Secondhand buying avoids production emissions and spend.",
+        "priorityScore": 70,
+        "impactScore": 93.35,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "diet-food-waste-plan",
+        "action": "Plan meals to reduce food waste",
+        "category": "diet",
+        "impact": 190,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Meal planning saves money while reducing wasted food emissions.",
+        "priorityScore": 66,
+        "impactScore": 78.75,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "transport-bike-short-trips",
+        "action": "Use a bike or walking for short trips under 3 km",
+        "category": "transport",
+        "impact": 260,
+        "cost": 40,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Short trip mode shifts are low-cost and easy to start.",
+        "priorityScore": 68,
+        "impactScore": 76.3333,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-repair-before-replace",
+        "action": "Repair electronics or appliances before replacing",
+        "category": "shopping",
+        "impact": 300,
+        "cost": 120,
+        "difficulty": 3,
+        "supportedBudgetLevels": [
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money"
+        ],
+        "supportedEffortLevels": [
+          "medium",
+          "high"
+        ],
+        "explanation": "Repairing extends product life and avoids replacement emissions.",
+        "priorityScore": 74,
+        "impactScore": 65.5,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "transport-carpool-weekly",
+        "action": "Carpool once per week",
+        "category": "transport",
+        "impact": 180,
+        "cost": 10,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Carpooling reduces fuel use without major lifestyle changes.",
+        "priorityScore": 58,
+        "impactScore": 54.6667,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      }
+    ],
+    "plan": {
+      "weeks": [
+        {
+          "week": 1,
+          "actions": [
+            {
+              "id": "energy-led-lighting",
+              "action": "Replace high-use bulbs with LEDs",
+              "category": "energy",
+              "impact": 140,
+              "cost": 60,
+              "difficulty": 1,
+              "supportedBudgetLevels": [
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "LED upgrades are simple and lower electricity demand.",
+              "priorityScore": 64,
+              "impactScore": 68.5,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "actions": [
+            {
+              "id": "shopping-30-day-rule",
+              "action": "Use a 30-day rule for non-essential purchases",
+              "category": "shopping",
+              "impact": 210,
+              "cost": 0,
+              "difficulty": 1,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Delaying non-essential purchases reduces impulse consumption.",
+              "priorityScore": 76,
+              "impactScore": 146.0833,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "actions": [
+            {
+              "id": "energy-thermostat-optimization",
+              "action": "Adjust heating and cooling setpoints",
+              "category": "energy",
+              "impact": 320,
+              "cost": 0,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+              "priorityScore": 82,
+              "impactScore": 126.8,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "actions": [
+            {
+              "id": "diet-reduce-red-meat",
+              "action": "Replace red meat with lower-carbon proteins",
+              "category": "diet",
+              "impact": 410,
+              "cost": 10,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Protein swaps offer strong diet impact with modest effort.",
+              "priorityScore": 80,
+              "impactScore": 115.8333,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        }
+      ]
+    },
+    "missionControlData": {
+      "footprintTons": 7.19568,
+      "hotspotContribution": 84.05,
+      "bestAction": {
+        "action": "Adjust heating and cooling setpoints",
+        "impact": 320
+      },
+      "projectedReduction": 320
+    },
+    "coachResponse": {
+      "type": "weekly_focus",
+      "category": "general",
+      "answer": "Focus on **Adjust heating and cooling setpoints**. EarthIQ selected it because **energy** is the priority area, and it can reduce about **320 kg CO2e** annually. You have **0 progress updates** recorded, so keep the next step small and measurable.",
+      "model": "gemini-ready-demo",
+      "grounding": {
+        "hotspot": "energy",
+        "recommendationCount": 9,
+        "progressCount": 0
+      }
+    },
+    "decisionReport": {
+      "totalEmissions": 7195.68,
+      "largestEmissionSource": "energy",
+      "hotspotPercentage": 84.05,
+      "bestAction": {
+        "action": "Adjust heating and cooling setpoints",
+        "impact": 320
+      },
+      "projectedReduction": 320,
+      "keyInsights": [
+        "Your annual footprint is 7195.68 kg CO2e.",
+        "energy is the largest emission source at 84.05%.",
+        "Your primary goal is save_money.",
+        "The highest-ranked action is Adjust heating and cooling setpoints."
+      ],
+      "recommendationSummaries": [
+        {
+          "id": "energy-thermostat-optimization",
+          "action": "Adjust heating and cooling setpoints",
+          "category": "energy",
+          "impact": 320,
+          "priorityScore": 82,
+          "explanation": {
+            "title": "Adjust heating and cooling setpoints",
+            "summary": "energy is your largest source of emissions.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "energy contributes 84.05% of your emissions.",
+              "This action could reduce approximately 320 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 320
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "energy-led-lighting",
+          "action": "Replace high-use bulbs with LEDs",
+          "category": "energy",
+          "impact": 140,
+          "priorityScore": 64,
+          "explanation": {
+            "title": "Replace high-use bulbs with LEDs",
+            "summary": "energy is your largest source of emissions.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "energy contributes 84.05% of your emissions.",
+              "This action could reduce approximately 140 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 140
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-30-day-rule",
+          "action": "Use a 30-day rule for non-essential purchases",
+          "category": "shopping",
+          "impact": 210,
+          "priorityScore": 76,
+          "explanation": {
+            "title": "Use a 30-day rule for non-essential purchases",
+            "summary": "Use a 30-day rule for non-essential purchases targets shopping while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "shopping contributes 2.33% of your emissions.",
+              "This action could reduce approximately 210 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 210
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "diet-reduce-red-meat",
+          "action": "Replace red meat with lower-carbon proteins",
+          "category": "diet",
+          "impact": 410,
+          "priorityScore": 80,
+          "explanation": {
+            "title": "Replace red meat with lower-carbon proteins",
+            "summary": "Replace red meat with lower-carbon proteins targets diet while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "diet contributes 10.84% of your emissions.",
+              "This action could reduce approximately 410 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 410
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-buy-secondhand",
+          "action": "Buy secondhand for clothing and home goods",
+          "category": "shopping",
+          "impact": 230,
+          "priorityScore": 70,
+          "explanation": {
+            "title": "Buy secondhand for clothing and home goods",
+            "summary": "Buy secondhand for clothing and home goods targets shopping while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "shopping contributes 2.33% of your emissions.",
+              "This action could reduce approximately 230 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 230
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "diet-food-waste-plan",
+          "action": "Plan meals to reduce food waste",
+          "category": "diet",
+          "impact": 190,
+          "priorityScore": 66,
+          "explanation": {
+            "title": "Plan meals to reduce food waste",
+            "summary": "Plan meals to reduce food waste targets diet while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "diet contributes 10.84% of your emissions.",
+              "This action could reduce approximately 190 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 190
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "transport-bike-short-trips",
+          "action": "Use a bike or walking for short trips under 3 km",
+          "category": "transport",
+          "impact": 260,
+          "priorityScore": 68,
+          "explanation": {
+            "title": "Use a bike or walking for short trips under 3 km",
+            "summary": "Use a bike or walking for short trips under 3 km targets transport while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "transport contributes 2.77% of your emissions.",
+              "This action could reduce approximately 260 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 260
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-repair-before-replace",
+          "action": "Repair electronics or appliances before replacing",
+          "category": "shopping",
+          "impact": 300,
+          "priorityScore": 74,
+          "explanation": {
+            "title": "Repair electronics or appliances before replacing",
+            "summary": "Repair electronics or appliances before replacing targets shopping while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "shopping contributes 2.33% of your emissions.",
+              "This action could reduce approximately 300 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 300
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "transport-carpool-weekly",
+          "action": "Carpool once per week",
+          "category": "transport",
+          "impact": 180,
+          "priorityScore": 58,
+          "explanation": {
+            "title": "Carpool once per week",
+            "summary": "Carpool once per week targets transport while your largest source is energy.",
+            "reasoning": [
+              "energy contributes 84.05% of your emissions.",
+              "transport contributes 2.77% of your emissions.",
+              "This action could reduce approximately 180 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 180
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Rural Carnivore (Diet Hotspot)": {
+    "carbonBreakdown": {
+      "categories": {
+        "transport": 499.2,
+        "energy": 756,
+        "diet": 4680,
+        "shopping": 100.80000000000001
+      },
+      "total": 6036
+    },
+    "hotspot": {
+      "category": "diet",
+      "percentageContribution": 77.53
+    },
+    "recommendations": [
+      {
+        "id": "diet-reduce-red-meat",
+        "action": "Replace red meat with lower-carbon proteins",
+        "category": "diet",
+        "impact": 410,
+        "cost": 10,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Protein swaps offer strong diet impact with modest effort.",
+        "priorityScore": 80,
+        "impactScore": 87.4722,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "diet-food-waste-plan",
+        "action": "Plan meals to reduce food waste",
+        "category": "diet",
+        "impact": 190,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Meal planning saves money while reducing wasted food emissions.",
+        "priorityScore": 66,
+        "impactScore": 56.25,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-30-day-rule",
+        "action": "Use a 30-day rule for non-essential purchases",
+        "category": "shopping",
+        "impact": 210,
+        "cost": 0,
+        "difficulty": 1,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Delaying non-essential purchases reduces impulse consumption.",
+        "priorityScore": 76,
+        "impactScore": 109.5625,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "energy-thermostat-optimization",
+        "action": "Adjust heating and cooling setpoints",
+        "category": "energy",
+        "impact": 320,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "reduce_emissions",
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+        "priorityScore": 82,
+        "impactScore": 90.5714,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "shopping-buy-secondhand",
+        "action": "Buy secondhand for clothing and home goods",
+        "category": "shopping",
+        "impact": 230,
+        "cost": 0,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Secondhand buying avoids production emissions and spend.",
+        "priorityScore": 70,
+        "impactScore": 66.6786,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      },
+      {
+        "id": "transport-carpool-weekly",
+        "action": "Carpool once per week",
+        "category": "transport",
+        "impact": 180,
+        "cost": 10,
+        "difficulty": 2,
+        "supportedBudgetLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "supportedGoals": [
+          "save_money",
+          "low_effort"
+        ],
+        "supportedEffortLevels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "explanation": "Carpooling reduces fuel use without major lifestyle changes.",
+        "priorityScore": 58,
+        "impactScore": 40.9444,
+        "goalAlignment": 1.25,
+        "budgetCompatibility": 1.2
+      }
+    ],
+    "plan": {
+      "weeks": [
+        {
+          "week": 1,
+          "actions": [
+            {
+              "id": "diet-reduce-red-meat",
+              "action": "Replace red meat with lower-carbon proteins",
+              "category": "diet",
+              "impact": 410,
+              "cost": 10,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Protein swaps offer strong diet impact with modest effort.",
+              "priorityScore": 80,
+              "impactScore": 87.4722,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "actions": [
+            {
+              "id": "energy-thermostat-optimization",
+              "action": "Adjust heating and cooling setpoints",
+              "category": "energy",
+              "impact": 320,
+              "cost": 0,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "reduce_emissions",
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Setpoint changes reduce heating and cooling load immediately.",
+              "priorityScore": 82,
+              "impactScore": 90.5714,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "actions": [
+            {
+              "id": "diet-food-waste-plan",
+              "action": "Plan meals to reduce food waste",
+              "category": "diet",
+              "impact": 190,
+              "cost": 0,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Meal planning saves money while reducing wasted food emissions.",
+              "priorityScore": 66,
+              "impactScore": 56.25,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "actions": [
+            {
+              "id": "shopping-buy-secondhand",
+              "action": "Buy secondhand for clothing and home goods",
+              "category": "shopping",
+              "impact": 230,
+              "cost": 0,
+              "difficulty": 2,
+              "supportedBudgetLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "supportedGoals": [
+                "save_money",
+                "low_effort"
+              ],
+              "supportedEffortLevels": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "explanation": "Secondhand buying avoids production emissions and spend.",
+              "priorityScore": 70,
+              "impactScore": 66.6786,
+              "goalAlignment": 1.25,
+              "budgetCompatibility": 1.2
+            }
+          ]
+        }
+      ]
+    },
+    "missionControlData": {
+      "footprintTons": 6.036,
+      "hotspotContribution": 77.53,
+      "bestAction": {
+        "action": "Replace red meat with lower-carbon proteins",
+        "impact": 410
+      },
+      "projectedReduction": 410
+    },
+    "coachResponse": {
+      "type": "weekly_focus",
+      "category": "general",
+      "answer": "Focus on **Replace red meat with lower-carbon proteins**. EarthIQ selected it because **diet** is the priority area, and it can reduce about **410 kg CO2e** annually. You have **0 progress updates** recorded, so keep the next step small and measurable.",
+      "model": "gemini-ready-demo",
+      "grounding": {
+        "hotspot": "diet",
+        "recommendationCount": 6,
+        "progressCount": 0
+      }
+    },
+    "decisionReport": {
+      "totalEmissions": 6036,
+      "largestEmissionSource": "diet",
+      "hotspotPercentage": 77.53,
+      "bestAction": {
+        "action": "Replace red meat with lower-carbon proteins",
+        "impact": 410
+      },
+      "projectedReduction": 410,
+      "keyInsights": [
+        "Your annual footprint is 6036 kg CO2e.",
+        "diet is the largest emission source at 77.53%.",
+        "Your primary goal is low_effort.",
+        "The highest-ranked action is Replace red meat with lower-carbon proteins."
+      ],
+      "recommendationSummaries": [
+        {
+          "id": "diet-reduce-red-meat",
+          "action": "Replace red meat with lower-carbon proteins",
+          "category": "diet",
+          "impact": 410,
+          "priorityScore": 80,
+          "explanation": {
+            "title": "Replace red meat with lower-carbon proteins",
+            "summary": "diet is your largest source of emissions.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "diet contributes 77.53% of your emissions.",
+              "This action could reduce approximately 410 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 410
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "diet-food-waste-plan",
+          "action": "Plan meals to reduce food waste",
+          "category": "diet",
+          "impact": 190,
+          "priorityScore": 66,
+          "explanation": {
+            "title": "Plan meals to reduce food waste",
+            "summary": "diet is your largest source of emissions.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "diet contributes 77.53% of your emissions.",
+              "This action could reduce approximately 190 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 190
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-30-day-rule",
+          "action": "Use a 30-day rule for non-essential purchases",
+          "category": "shopping",
+          "impact": 210,
+          "priorityScore": 76,
+          "explanation": {
+            "title": "Use a 30-day rule for non-essential purchases",
+            "summary": "Use a 30-day rule for non-essential purchases targets shopping while your largest source is diet.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "shopping contributes 1.67% of your emissions.",
+              "This action could reduce approximately 210 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 210
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "energy-thermostat-optimization",
+          "action": "Adjust heating and cooling setpoints",
+          "category": "energy",
+          "impact": 320,
+          "priorityScore": 82,
+          "explanation": {
+            "title": "Adjust heating and cooling setpoints",
+            "summary": "Adjust heating and cooling setpoints targets energy while your largest source is diet.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "energy contributes 12.52% of your emissions.",
+              "This action could reduce approximately 320 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 320
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "shopping-buy-secondhand",
+          "action": "Buy secondhand for clothing and home goods",
+          "category": "shopping",
+          "impact": 230,
+          "priorityScore": 70,
+          "explanation": {
+            "title": "Buy secondhand for clothing and home goods",
+            "summary": "Buy secondhand for clothing and home goods targets shopping while your largest source is diet.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "shopping contributes 1.67% of your emissions.",
+              "This action could reduce approximately 230 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 230
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        },
+        {
+          "id": "transport-carpool-weekly",
+          "action": "Carpool once per week",
+          "category": "transport",
+          "impact": 180,
+          "priorityScore": 58,
+          "explanation": {
+            "title": "Carpool once per week",
+            "summary": "Carpool once per week targets transport while your largest source is diet.",
+            "reasoning": [
+              "diet contributes 77.53% of your emissions.",
+              "transport contributes 8.27% of your emissions.",
+              "This action could reduce approximately 180 kg CO2 annually.",
+              "This recommendation aligns with your budget.",
+              "This recommendation matches your sustainability goals.",
+              "This recommendation matches your effort preference."
+            ],
+            "projectedImpact": {
+              "annualReductionKg": 180
+            },
+            "suitability": {
+              "budgetCompatible": true,
+              "goalAligned": true,
+              "effortCompatible": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

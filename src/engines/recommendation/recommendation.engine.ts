@@ -182,17 +182,28 @@ export class RecommendationEngine implements RecommendationEngineContract {
       "budgetLevel" in input.profile
         ? input.profile
         : await contextEngine.normalizeContext({ userProfile: input.profile });
-    const categoryRecommendations = recommendationDataset.filter(
-      (recommendation) => recommendation.category === input.hotspot.category,
+
+    const allMatching = recommendationDataset.filter(
+      (rec) =>
+        rec.cost <= profile.maxRecommendationCost &&
+        rec.supportedBudgetLevels.includes(profile.budgetLevel) &&
+        rec.supportedEffortLevels.includes(profile.effortPreference) &&
+        rec.supportedGoals.includes(profile.primaryGoal),
     );
 
-    return categoryRecommendations.filter(
-      (recommendation) =>
-        recommendation.cost <= profile.maxRecommendationCost &&
-        recommendation.supportedBudgetLevels.includes(profile.budgetLevel) &&
-        recommendation.supportedEffortLevels.includes(profile.effortPreference) &&
-        recommendation.supportedGoals.includes(profile.primaryGoal),
+    const hotspotMatching = allMatching.filter(
+      (rec) => rec.category === input.hotspot.category,
     );
+
+    if (hotspotMatching.length >= 4) {
+      return hotspotMatching;
+    }
+
+    const secondaryMatching = allMatching.filter(
+      (rec) => rec.category !== input.hotspot.category,
+    );
+
+    return [...hotspotMatching, ...secondaryMatching];
   }
 
   async generateRecommendations(hotspots: CarbonHotspot[]): Promise<Recommendation[]> {

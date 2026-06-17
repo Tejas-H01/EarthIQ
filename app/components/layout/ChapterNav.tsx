@@ -41,7 +41,7 @@ export function ChapterNav({ activeScreen, hasResult, onNavigate }: ChapterNavPr
     >
       {chapters.map((chapter) => {
         const isActive = activeScreen === chapter.id;
-        const isLocked = chapter.requiresResult && !hasResult;
+        const isLocked = false;
 
         return (
           <button

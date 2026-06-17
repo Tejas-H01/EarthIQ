@@ -49,4 +49,18 @@ export class PlanRepository {
 
     return response.data;
   }
+
+  async loadPlanHistory(userId: string): Promise<PlanRow[]> {
+    const response = await this.client
+      .from("plans")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false });
+
+    if (response.error) {
+      throw new Error(`loadPlanHistory failed: ${response.error.message}`);
+    }
+
+    return response.data || [];
+  }
 }

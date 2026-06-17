@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import type { AssessmentFormState, EarthIqAssessmentResult } from "@/application";
 import type { EffortPreference, PrimaryGoal } from "@/types";
+import { CustomSelect } from "../ui";
+
 
 // ─── Step configuration ──────────────────────────────────────────────────────
 
@@ -463,54 +465,78 @@ export function AssessmentExperience(props: AssessmentExperienceProps) {
               {/* Custom input row */}
               <motion.div
                 variants={itemVariants}
-                className="mt-8 grid gap-6 md:grid-cols-2"
+                className="mt-8 grid gap-6 md:grid-cols-2 text-white"
               >
-                <label className="grid gap-2.5 text-sm font-medium text-white/60">
-                  {currentStep.label}
-                  <input
-                    type="number"
-                    min="0"
-                    value={props.form[currentStep.field]}
-                    onChange={(e) => props.onNumberChange(currentStep.field, e.target.value)}
-                    className="field-control"
-                    aria-label={currentStep.label}
-                  />
-                </label>
+                {currentStep.field === "budget" ? (
+                  <div className="grid gap-4 md:col-span-1">
+                    <div className="flex justify-between items-center text-sm font-medium text-white/60">
+                      <span>Tight Budget</span>
+                      <span className="text-base font-bold text-[#A3FFB0] bg-[#A3FFB0]/10 border border-[#A3FFB0]/20 rounded-full px-3 py-0.5">
+                        {props.form.budget} units
+                      </span>
+                      <span>Flexible Budget</span>
+                    </div>
+                    <div className="relative mt-2 flex items-center">
+                      <input
+                        type="range"
+                        min="0"
+                        max="500"
+                        step="5"
+                        value={props.form.budget}
+                        onChange={(e) => props.onNumberChange("budget", e.target.value)}
+                        className="w-full h-2 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#A3FFB0]/50"
+                        style={{
+                          background: `linear-gradient(to right, #A3FFB0 0%, #A3FFB0 ${(props.form.budget / 500) * 100}%, rgba(255, 255, 255, 0.1) ${(props.form.budget / 500) * 100}%, rgba(255, 255, 255, 0.1) 100%)`
+                        }}
+                        aria-label="Monthly action budget"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <label className="grid gap-2.5 text-sm font-medium text-white/60">
+                    {currentStep.label}
+                    <input
+                      type="number"
+                      min="0"
+                      value={props.form[currentStep.field]}
+                      onChange={(e) => props.onNumberChange(currentStep.field, e.target.value)}
+                      className="field-control"
+                      aria-label={currentStep.label}
+                    />
+                  </label>
+                )}
 
                 {/* Goal & effort selects on final step */}
                 {isLastStep && (
                   <div className="grid gap-4 sm:grid-cols-2 md:col-span-1">
-                    <label className="grid gap-2.5 text-sm font-medium text-white/60">
-                      Primary goal
-                      <select
+                    <div className="grid gap-2.5 text-sm font-medium text-white/60">
+                      <span>Primary goal</span>
+                      <CustomSelect
                         value={props.form.primaryGoal}
-                        onChange={(e) =>
-                          props.onTextChange("primaryGoal", e.target.value as PrimaryGoal)
+                        onChange={(val) =>
+                          props.onTextChange("primaryGoal", val as PrimaryGoal)
                         }
-                        className="field-control"
-                      >
-                        <option value="save_money">Save money</option>
-                        <option value="reduce_emissions">Reduce emissions</option>
-                        <option value="low_effort">Keep effort low</option>
-                      </select>
-                    </label>
-                    <label className="grid gap-2.5 text-sm font-medium text-white/60">
-                      Effort level
-                      <select
+                        options={[
+                          { value: "save_money", label: "Save money" },
+                          { value: "reduce_emissions", label: "Reduce emissions" },
+                          { value: "low_effort", label: "Keep effort low" },
+                        ]}
+                      />
+                    </div>
+                    <div className="grid gap-2.5 text-sm font-medium text-white/60">
+                      <span>Effort level</span>
+                      <CustomSelect
                         value={props.form.effortPreference}
-                        onChange={(e) =>
-                          props.onTextChange(
-                            "effortPreference",
-                            e.target.value as EffortPreference,
-                          )
+                        onChange={(val) =>
+                          props.onTextChange("effortPreference", val as EffortPreference)
                         }
-                        className="field-control"
-                      >
-                        <option value="low">Low effort</option>
-                        <option value="medium">Medium effort</option>
-                        <option value="high">High effort</option>
-                      </select>
-                    </label>
+                        options={[
+                          { value: "low", label: "Low effort" },
+                          { value: "medium", label: "Medium effort" },
+                          { value: "high", label: "High effort" },
+                        ]}
+                      />
+                    </div>
                   </div>
                 )}
               </motion.div>
