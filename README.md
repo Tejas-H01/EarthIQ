@@ -1,294 +1,627 @@
-# EarthIQ — Intelligent Climate Companion
+# 🌍 EarthIQ — Intelligent Climate Companion
 
-> A personalized sustainability intelligence platform powered by Google Gemini.  
-> Built for the Google AI Competition 2026.
+> Understand your impact. Discover your biggest opportunity. Take meaningful action.
 
----
+EarthIQ is an AI-powered climate intelligence platform that helps individuals understand, prioritize, and reduce their carbon footprint through personalized recommendations, transparent reasoning, and AI-guided action plans.
 
-## Problem Statement
-
-Climate action is abstract. People know they should reduce their carbon footprint, but they don't know **where to start**, **what actually matters**, or **why any given action was recommended to them**.
-
-Existing tools produce:
-- Generic advice not tailored to the individual
-- Opaque recommendations with no explanation
-- Information overload with no clear priority
-- No feedback loop on progress
-
-**EarthIQ solves this.** It builds a personalized carbon profile, identifies the highest-leverage opportunity, explains *why* using a multi-signal reasoning engine, and provides an actionable 30-day plan — all powered by a transparent intelligence stack.
+Unlike traditional carbon calculators that generate generic advice, EarthIQ combines explainable decision intelligence, sustainability planning, and conversational AI to help users make informed climate decisions based on their unique lifestyle, goals, budget, and effort preferences.
 
 ---
 
-## Solution
+## 🚀 Live Demo
 
-EarthIQ is a **climate intelligence companion**, not a carbon calculator.
+**Live Application:** https://earth-iq.vercel.app
 
-It combines:
-1. A **structured assessment** (transportation, energy, food, lifestyle, goals)
-2. A **multi-engine intelligence layer** that ranks, explains, and plans
-3. An **AI coach** powered by Google Gemini that answers questions grounded in the user's actual profile
-4. A **story-driven Mission Control** that presents results as a personalized climate report
-
-The user experience is designed to answer one question in under 15 seconds:
-
-> *"What is the single most impactful thing I can do right now, and why did EarthIQ choose it?"*
+**Repository:** https://github.com/YOUR_USERNAME/EarthIQ
 
 ---
 
-## Architecture
+# 🎯 Problem Statement
 
+Climate change is one of the defining challenges of our generation.
+
+While many people want to live more sustainably, most carbon footprint tools fail because they:
+
+- Provide generic recommendations
+- Focus only on raw numbers
+- Lack personalization
+- Do not explain why recommendations were chosen
+- Offer no structured path toward improvement
+- Fail to create long-term engagement
+
+Users are often left asking:
+
+> "What should I actually do first?"
+
+and
+
+> "Why is this recommendation relevant to me?"
+
+EarthIQ solves this problem by transforming sustainability data into personalized, explainable intelligence.
+
+---
+
+# 💡 Solution
+
+EarthIQ is a climate intelligence companion.
+
+The platform:
+
+1. Collects lifestyle and sustainability information through an assessment
+2. Calculates a personalized carbon footprint
+3. Detects the user's highest-impact emission hotspot
+4. Generates context-aware recommendations
+5. Explains why those recommendations were selected
+6. Builds a structured 30-day improvement plan
+7. Provides an AI sustainability coach powered by Google Gemini
+8. Tracks progress over time through authenticated user journeys
+
+The result is a personalized sustainability experience designed to promote long-term behavioral change.
+
+---
+
+# ✨ Core Features
+
+## 🌱 Personalized Carbon Assessment
+
+Users complete a guided assessment covering:
+
+- Transportation
+- Home Energy Usage
+- Food & Diet
+- Lifestyle & Consumption
+- Sustainability Goals
+
+EarthIQ uses these signals to build an individualized sustainability profile.
+
+---
+
+## 🔥 Hotspot Detection
+
+EarthIQ automatically identifies:
+
+- Largest source of emissions
+- Percentage contribution
+- Highest-leverage improvement area
+
+Example hotspots:
+
+- Transport
+- Energy
+- Diet
+- Lifestyle Consumption
+
+---
+
+## 🧠 Explainable Recommendation Engine
+
+Rather than generating generic advice, EarthIQ ranks actions using multiple signals:
+
+- Carbon Impact
+- Budget Compatibility
+- Goal Alignment
+- Effort Preference
+- Sustainability Context
+
+Every recommendation includes:
+
+✅ Why it was selected
+
+✅ Expected impact
+
+✅ Budget compatibility
+
+✅ Effort compatibility
+
+---
+
+## 📖 Mission Control
+
+Mission Control transforms sustainability data into a story-driven experience.
+
+Users receive:
+
+- Carbon Story
+- Biggest Opportunity
+- Impact Projection
+- Recommended Actions
+- Confidence Signals
+- 30-Day Plan
+
+Rather than overwhelming dashboards, EarthIQ presents intelligence in a human-centered narrative.
+
+---
+
+## 🤖 AI Sustainability Coach
+
+Powered by Google Gemini.
+
+Users can ask:
+
+- Why was this recommendation chosen?
+- How can I reduce my footprint faster?
+- What should I focus on this week?
+- How does my progress compare over time?
+
+The coach is grounded in EarthIQ's intelligence layer and uses the user's actual assessment results.
+
+---
+
+## 📈 Journey Tracking
+
+Authenticated users can:
+
+- Save assessments
+- Track progress
+- Review previous plans
+- Monitor improvement over time
+
+EarthIQ transforms sustainability into an ongoing journey rather than a one-time calculation.
+
+---
+
+## 🔐 Authentication & Persistence
+
+EarthIQ includes:
+
+- Secure User Registration
+- Secure Login
+- Session Persistence
+- Supabase Authentication
+- User-specific data storage
+- Row Level Security (RLS)
+
+Users only have access to their own sustainability records.
+
+---
+
+# 🏗️ Architecture
+
+EarthIQ follows a layered architecture focused on maintainability, testability, and separation of concerns.
+
+```text
+Presentation Layer
+    ↓
+Application Layer
+    ↓
+Intelligence Layer
+    ↓
+Persistence Layer
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        PRESENTATION LAYER                           │
-│  Assessment Flow → Mission Control → AI Coach → Audit Report        │
-│  (Next.js 16 · React · Framer Motion · Instrument Serif / Inter)    │
-└─────────────────────────┬───────────────────────────────────────────┘
-                          │
-┌─────────────────────────▼───────────────────────────────────────────┐
-│                     APPLICATION LAYER                               │
-│  EarthIqApplicationService · summarizeProgress · askCoach           │
-└──────────────────┬──────────────────────┬───────────────────────────┘
-                   │                      │
-┌──────────────────▼──────┐  ┌────────────▼────────────────────────── ┐
-│   INTELLIGENCE ENGINES  │  │         AI COACH LAYER                  │
-│                         │  │                                         │
-│  CarbonEngine           │  │  QuestionClassifier                     │
-│  HotspotEngine          │  │  CoachPromptBuilder                     │
-│  RecommendationEngine   │  │  CoachService → Gemini API              │
-│  RankingEngine          │  │  AIContextBuilder                       │
-│  PlannerEngine          │  │                                         │
-│  ContextEngine          │  └─────────────────────────────────────────┘
-│  ExplanationEngine      │
-│  DecisionReportEngine   │
-└──────────────────┬──────┘
-                   │
-┌──────────────────▼──────────────────────────────────────────────────┐
-│                    PERSISTENCE LAYER                                 │
-│           Supabase (assessments, recommendations, progress)          │
-└─────────────────────────────────────────────────────────────────────┘
-```
 
-### Key Directories
+---
 
-```
-src/
-├── engines/          # Domain intelligence engines (pure functions)
-├── services/         # Coach service, prompt builder, question classifier
-├── application/      # EarthIqApplicationService — orchestrates engines
-├── repositories/     # Supabase data access layer
-├── types/            # Shared domain types
-└── tests/            # 27 unit tests across all layers
+## Architecture Overview
 
-app/
-├── components/
-│   ├── assessment/       # Chapter-based onboarding flow
-│   ├── mission-control/  # Story-driven carbon intelligence dashboard
-│   ├── coach/            # AI coaching workspace
-│   ├── audit/            # Sustainability Audit (Spotify Wrapped–style)
-│   ├── layout/           # CinematicBackdrop, ChapterNav
-│   └── ui/               # Design system primitives
-├── globals.css           # Design tokens, glassmorphism, utilities
-└── layout.tsx            # Next.js root layout with fonts
+```text
+┌────────────────────────────────────────────┐
+│              Presentation Layer            │
+│ Assessment • Mission Control • Coach       │
+│ Audit Report • Journey                     │
+└────────────────────────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│             Application Layer              │
+│ EarthIqApplicationService                  │
+│ Workflow Orchestration                     │
+└────────────────────────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│            Intelligence Layer              │
+│ Carbon Engine                              │
+│ Hotspot Engine                             │
+│ Recommendation Engine                      │
+│ Ranking Engine                             │
+│ Planner Engine                             │
+│ Context Engine                             │
+│ Explanation Engine                         │
+│ Decision Report Engine                     │
+└────────────────────────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│             Persistence Layer              │
+│ Supabase                                   │
+│ Repositories                               │
+│ Authentication                             │
+└────────────────────────────────────────────┘
 ```
 
 ---
 
-## Intelligence Layer
+# 🧠 Intelligence Pipeline
 
-EarthIQ's recommendation pipeline runs 8 sequential engines:
+EarthIQ's recommendation system is built from multiple specialized engines.
 
-| Engine | Purpose |
-|--------|---------|
-| `CarbonEngine` | Calculates annual CO₂e from transport, energy, diet, lifestyle inputs |
-| `HotspotEngine` | Identifies the largest emission source and its percentage contribution |
-| `RecommendationEngine` | Generates a candidate list of contextually-filtered actions |
-| `RankingEngine` | Scores and orders candidates by impact × goal × budget × effort |
-| `PlannerEngine` | Structures the top recommendation into a 4-week progressive plan |
-| `ContextEngine` | Builds a structured profile combining user inputs and engine outputs |
-| `ExplanationEngine` | Generates per-recommendation reasoning with suitability signals |
-| `DecisionReportEngine` | Produces the final aggregated intelligence report |
+### 1. Carbon Engine
 
-Every recommendation surfaces **four alignment signals**:
-- ✓ Hotspot alignment — targets the largest emission source
-- ✓ Goal alignment — supports the user's declared primary goal
-- ✓ Budget alignment — fits the user's stated budget level
-- ✓ Effort alignment — matches the user's effort preference
+Calculates annual carbon emissions from:
+
+- Transport
+- Energy
+- Diet
+- Lifestyle
 
 ---
 
-## Explainability Layer
+### 2. Hotspot Engine
 
-EarthIQ is built around **explainability-first** design.
+Determines:
 
-The `ExplanationEngine` produces:
-```ts
-interface ExplanationResult {
-  title: string;
-  summary: string;          // Human-readable rationale
-  reasoning: string[];      // Bullet-point reasoning chain
-  projectedImpact: { annualReductionKg: number };
-  suitability: {
-    budgetCompatible: boolean;
-    goalAligned: boolean;
-    effortCompatible: boolean;
-  };
-}
+- Largest emission source
+- Relative contribution
+
+---
+
+### 3. Recommendation Engine
+
+Generates sustainability actions tailored to:
+
+- Profile
+- Goals
+- Budget
+- Effort preferences
+
+---
+
+### 4. Ranking Engine
+
+Prioritizes actions based on:
+
+- Impact
+- Cost
+- Difficulty
+- Goal alignment
+
+---
+
+### 5. Planner Engine
+
+Builds a structured:
+
+**4-week sustainability plan**
+
+with progressive improvement steps.
+
+---
+
+### 6. Context Engine
+
+Creates a unified user profile by combining:
+
+- Assessment signals
+- User preferences
+- Carbon analysis
+
+---
+
+### 7. Explanation Engine
+
+Generates transparent reasoning for every recommendation.
+
+This enables EarthIQ's:
+
+> "Why EarthIQ Chose This"
+
+feature.
+
+---
+
+### 8. Decision Report Engine
+
+Produces:
+
+- Sustainability Audit
+- Key Insights
+- Impact Summaries
+- Decision Narratives
+
+---
+
+# 🧩 Explainability-First Design
+
+Most recommendation systems only provide answers.
+
+EarthIQ provides reasoning.
+
+Every recommendation includes:
+
+- Hotspot alignment
+- Goal alignment
+- Budget alignment
+- Effort alignment
+- Expected impact
+
+Users can clearly understand:
+
+> Why was this recommendation selected for me?
+
+This transparency improves trust and actionability.
+
+---
+
+# 🤖 AI Coach Architecture
+
+The AI Coach follows a controlled architecture.
+
+```text
+Question
+    ↓
+Question Classifier
+    ↓
+AI Context Builder
+    ↓
+Prompt Builder
+    ↓
+Gemini
+    ↓
+Structured Response
 ```
 
-This powers the **"Why EarthIQ Chose This"** section in both Mission Control and the Audit Report — making the reasoning transparent and trustworthy.
+The AI coach does not independently calculate emissions or generate plans.
+
+Instead, it explains and communicates decisions already produced by EarthIQ's intelligence layer.
+
+This prevents hallucinated sustainability advice.
 
 ---
 
-## AI Coach
+# 🔒 Security
 
-The AI Coach uses Google Gemini to answer sustainability questions **grounded in the user's actual profile**.
+EarthIQ was built with security in mind.
 
-Pipeline:
-1. `QuestionClassifier` — categorises the question (weekly_focus / progress_summary / recommendation_explanation / sustainability_advice / goal_planning)
-2. `AIContextBuilder` — assembles a structured prompt from live engine outputs
-3. `CoachPromptBuilder` — formats the system instruction and user prompt
-4. `CoachService` — calls Gemini and returns a structured `CoachResponse`
+### Authentication
 
-Every response includes:
-- `type` — question category
-- `grounding` — signal counts (recommendations, progress points, hotspot)
-- `model` — the Gemini model used
+- Supabase Auth
+- Email & Password Login
+- Session Management
 
-The coach **never hallucates recommendations** — it only surfaces what the EarthIQ engines already computed.
+### Database Security
 
----
+- Row Level Security (RLS)
+- User-scoped access
+- Authenticated isolation
 
-## Security
+### Data Protection
 
-- API keys stored in environment variables (`.env.local`)
-- Supabase Row Level Security enabled on all tables
-- No user PII stored beyond the assessment form inputs
-- All AI calls proxied server-side through Next.js API routes
+- Environment Variables
+- Secure API handling
+- No exposed secrets
 
 ---
 
-## Testing
+# ♿ Accessibility
+
+EarthIQ includes:
+
+- Semantic HTML
+- Keyboard Navigation
+- Focus States
+- ARIA Labels
+- Responsive Design
+- Screen Reader Support
+
+Accessibility considerations were integrated throughout the UI design process.
+
+---
+
+# 🧪 Testing
+
+EarthIQ includes automated testing across all major layers.
+
+### Verification Commands
 
 ```bash
-npm run test        # 27 unit tests — all passing
-npm run typecheck   # Zero TypeScript errors
-npm run build       # Clean production build
+npm run test
+npm run typecheck
+npm run build
 ```
 
-Test coverage:
+### Coverage Areas
 
-| Suite | Tests | Focus |
-|-------|-------|-------|
-| `foundation.test.ts` | 2 | Carbon calculations, emission factors |
-| `intelligence-core.test.ts` | 6 | Hotspot, ranking, planner engines |
-| `explainability.test.ts` | 8 | Explanation engine, suitability signals |
-| `application-layer.test.ts` | 3 | End-to-end assessment flow |
-| `persistence.test.ts` | 3 | Repository layer, Supabase integration |
-| `coach.test.ts` | 5 | Question classification, coach service |
+- Carbon Calculations
+- Hotspot Detection
+- Recommendation Ranking
+- Planning Logic
+- Explainability Layer
+- Persistence Layer
+- AI Coach Services
+- Application Workflows
 
-All business logic engines are covered independently. UI components contain zero business logic.
-
----
-
-## Accessibility
-
-- `:focus-visible` outlines on all interactive elements using the signal-green accent
-- `aria-label` on every major section and interactive region
-- `aria-live="polite"` on the coach conversation area
-- `aria-current="step"` on the assessment chapter timeline
-- Semantic HTML: `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<form>`
-- Keyboard-navigable assessment flow (tab + enter)
-- Screen reader-compatible empty states with descriptive labels
+All tests pass successfully.
 
 ---
 
-## Setup
+# 🛠️ Technology Stack
 
-### Prerequisites
+| Category | Technology |
+|-----------|-----------|
+| Frontend | Next.js 16 |
+| UI | React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Database | Supabase |
+| Authentication | Supabase Auth |
+| AI | Google Gemini |
+| Validation | Zod |
+| Testing | Vitest |
+| Deployment | Vercel |
+
+---
+
+# 📸 Screenshots
+
+## Landing Page
+
+_Add screenshot_
+
+---
+
+## Assessment Experience
+
+_Add screenshot_
+
+---
+
+## Mission Control
+
+_Add screenshot_
+
+---
+
+## AI Sustainability Coach
+
+_Add screenshot_
+
+---
+
+## Journey Tracking
+
+_Add screenshot_
+
+---
+
+## Sustainability Audit
+
+_Add screenshot_
+
+---
+
+# 🚀 Local Setup
+
+## Prerequisites
+
 - Node.js 18+
-- A Supabase project
-- A Google AI Studio API key (Gemini)
+- Supabase Project
+- Google Gemini API Key
 
-### Install
+---
+
+## Installation
 
 ```bash
-git clone https://github.com/your-org/earthiq
-cd earthiq
+git clone https://github.com/YOUR_USERNAME/EarthIQ.git
+
+cd EarthIQ
+
 npm install
 ```
 
-### Environment
+---
 
-Create `.env.local`:
+## Environment Variables
+
+Create:
+
+```env
+.env.local
+```
+
+Add:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
 GEMINI_API_KEY=your_gemini_api_key
 ```
 
-### Run
+---
+
+## Run Locally
 
 ```bash
-npm run dev         # Development server at localhost:3000
-npm run build       # Production build
-npm run test        # Run test suite
+npm run dev
+```
+
+Application:
+
+```text
+http://localhost:3000
 ```
 
 ---
 
-## Demo Flow
+## Production Build
 
-EarthIQ includes a **one-click demo mode** for judges.
-
-1. Open the app at `localhost:3000`
-2. Click **⚡ Try Demo** on the landing page
-3. EarthIQ instantly loads a realistic sample profile and runs the full intelligence pipeline
-4. The cinematic "EarthIQ is reading your signals…" overlay plays
-5. Mission Control opens automatically showing a complete carbon story
-
-**Demo profile:**
-- Weekly transport: 120 km (regular commuter)
-- Monthly energy: 320 kWh (average home)
-- Weekly diet: 42 kg CO₂e (mixed diet)
-- Monthly lifestyle spend: 420 units
-- Goal: Reduce emissions · Budget: Moderate · Effort: Medium
-
-The demo uses **real EarthIQ engines** — not mocked data.
+```bash
+npm run build
+```
 
 ---
 
-## Screens
+# 🎮 Judge Quick Start
 
-| Screen | Purpose |
-|--------|---------|
-| **Hero** | Landing with demo button and capability overview |
-| **Assessment** | Chapter-based 5-step onboarding (Transport → Energy → Food → Lifestyle → Goals) |
-| **Mission Control** | Story-driven carbon intelligence: 7 sections from hero to confidence arc |
-| **AI Coach** | Sustainability strategist with context awareness + structured responses |
-| **Progress** | 30-day plan tracker with completion state |
-| **Sustainability Audit** | Spotify Wrapped–style 9-section intelligence report with shareable scorecard |
+Want to evaluate EarthIQ quickly?
 
----
+1. Open the live application
+2. Create an account or continue as guest
+3. Complete the assessment
+4. Review Mission Control
+5. Ask questions to the AI Coach
+6. Explore the Sustainability Audit
+7. Track progress in Journey
 
-## Why EarthIQ Is Different
-
-Most carbon tools tell you **what** to do. EarthIQ tells you **why**.
-
-| Feature | Generic Tools | EarthIQ |
-|---------|--------------|---------|
-| Personalised to profile | ❌ | ✓ |
-| Explains *why* this recommendation | ❌ | ✓ |
-| Multi-signal ranking (goal + budget + effort + impact) | ❌ | ✓ |
-| AI coach grounded in personal data | ❌ | ✓ |
-| Progressive 4-week action plan | ❌ | ✓ |
-| Confidence signals per recommendation | ❌ | ✓ |
-| Separation of business logic from UI | Varies | Strict |
-| Tested intelligence engine pipeline | Varies | 27 tests |
-
-EarthIQ is not a chatbot with a carbon calculator bolted on.  
-It is a **decision intelligence system** with a cinematic presentation layer.
+The complete intelligence pipeline can be experienced in under 2 minutes.
 
 ---
 
-*Built with Next.js · Google Gemini · Supabase · Framer Motion · TypeScript*
+# 🌍 Competition Alignment
+
+EarthIQ was designed specifically to demonstrate:
+
+### Smart Dynamic Assistant
+
+✅ AI Sustainability Coach
+
+### Context-Aware Decision Making
+
+✅ Personalized recommendation pipeline
+
+### Real-World Usability
+
+✅ Action plans, progress tracking, persistence
+
+### Code Quality
+
+✅ Layered architecture and strict separation of concerns
+
+### Security
+
+✅ Authentication and Row Level Security
+
+### Testing
+
+✅ Automated validation across business logic layers
+
+### Accessibility
+
+✅ Inclusive design and keyboard navigation
+
+---
+
+# 📌 Future Enhancements
+
+- Advanced sustainability benchmarking
+- Community challenges
+- Carbon offset integrations
+- Weekly AI-generated sustainability reports
+- Enhanced progress analytics
+
+---
+
+# 👨‍💻 Team
+
+Developed as part of the AI Sustainability Challenge.
+
+---
+
+## EarthIQ
+
+**Understand your impact.  
+Discover your opportunity.  
+Change your future.**
