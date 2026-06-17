@@ -40,6 +40,117 @@ and
 EarthIQ solves this problem by transforming sustainability data into personalized, explainable intelligence.
 
 ---
+# 🎯 Challenge Vertical
+
+### Sustainability & Climate Intelligence
+
+EarthIQ was built under the sustainability challenge vertical.
+
+The platform helps individuals understand, track, and reduce their carbon footprint through personalized sustainability intelligence, explainable recommendations, and actionable improvement plans.
+
+Rather than functioning as a simple carbon calculator, EarthIQ acts as an intelligent climate companion that guides users toward practical environmental actions based on their unique lifestyle and preferences.
+
+---
+
+# 🧠 Approach & Decision Logic
+
+EarthIQ follows an explainability-first approach.
+
+Instead of generating generic sustainability advice, the platform analyzes user-provided lifestyle information and transforms it into personalized recommendations through a structured intelligence pipeline.
+
+Core principles:
+
+- Personalization over generic advice
+- Explainability over black-box recommendations
+- Actionability over passive reporting
+- Long-term sustainability improvement over one-time calculations
+
+Decision-making is driven by multiple specialized intelligence engines that work together to identify the highest-impact opportunities for each user.
+
+---
+
+# ⚙️ How The Solution Works
+
+### Step 1 — Assessment
+
+The user completes a guided assessment covering:
+
+- Transportation
+- Energy Consumption
+- Diet
+- Lifestyle Habits
+- Sustainability Preferences
+
+---
+
+### Step 2 — Carbon Analysis
+
+The Carbon Engine calculates estimated annual emissions across major lifestyle categories.
+
+---
+
+### Step 3 — Hotspot Detection
+
+The Hotspot Engine identifies the user's largest source of emissions and determines where improvement efforts will create the greatest impact.
+
+---
+
+### Step 4 — Recommendation Generation
+
+The Recommendation Engine generates sustainability actions aligned with:
+
+- User profile
+- Budget
+- Goals
+- Effort preferences
+
+---
+
+### Step 5 — Intelligent Ranking
+
+The Ranking Engine prioritizes recommendations using:
+
+- Expected carbon reduction
+- Cost considerations
+- Difficulty level
+- Goal alignment
+- User context
+
+---
+
+### Step 6 — Sustainability Planning
+
+The Planner Engine generates a structured 4-week action plan designed to help users gradually improve sustainability habits.
+
+---
+
+### Step 7 — Explainability Layer
+
+The Explanation Engine provides transparent reasoning for each recommendation so users understand:
+
+- Why the recommendation was selected
+- How it relates to their footprint
+- What impact it may have
+
+---
+
+### Step 8 — AI Sustainability Coach
+
+The AI Coach uses EarthIQ's decision outputs to answer questions, explain recommendations, and guide users through their sustainability journey.
+
+---
+
+# 📌 Assumptions
+
+EarthIQ was designed using the following assumptions:
+
+- Users are willing to provide basic lifestyle information through an assessment.
+- Carbon footprint estimates are intended for educational and behavioral guidance rather than scientific auditing.
+- Users benefit more from prioritized recommendations than from large lists of generic sustainability advice.
+- Explainable recommendations increase user trust and engagement.
+- Long-term behavior change is more likely when users receive structured plans and progress tracking.
+- Sustainability decisions should account for user goals, budget constraints, and effort preferences rather than carbon impact alone.
+---
 
 # 💡 Solution
 
